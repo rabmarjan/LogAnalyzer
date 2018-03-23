@@ -4,7 +4,7 @@
 
 1. Clone From Repository LogAnalyzer
 ```bash
-git clone https://github.com/rabmarjan/LogAnalyzer.git
+$ git clone https://github.com/rabmarjan/LogAnalyzer.git
 ```
 2. Put Project Path to .bashrc file and name the variable ``LOGANALYZER``
 ```bash
