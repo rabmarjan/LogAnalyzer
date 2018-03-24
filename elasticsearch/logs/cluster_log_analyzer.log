@@ -1,0 +1,87 @@
+[2018-03-21T12:19:28,969][INFO ][o.e.n.Node               ] [node_log_analyzer] initializing ...
+[2018-03-21T12:19:29,918][INFO ][o.e.e.NodeEnvironment    ] [node_log_analyzer] using [1] data paths, mounts [[/home (/dev/sda4)]], net usable_space [132.7gb], net total_space [348.4gb], types [ext4]
+[2018-03-21T12:19:29,918][INFO ][o.e.e.NodeEnvironment    ] [node_log_analyzer] heap size [990.7mb], compressed ordinary object pointers [true]
+[2018-03-21T12:19:30,940][INFO ][o.e.n.Node               ] [node_log_analyzer] node name [node_log_analyzer], node ID [8Pc6hVDLQziRJ8xUHOCEEA]
+[2018-03-21T12:19:30,941][INFO ][o.e.n.Node               ] [node_log_analyzer] version[6.2.2], pid[10164], build[10b1edd/2018-02-16T19:01:30.685723Z], OS[Linux/4.4.0-62-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_161/25.161-b12]
+[2018-03-21T12:19:30,941][INFO ][o.e.n.Node               ] [node_log_analyzer] JVM arguments [-Xms1g, -Xmx1g, -XX:+UseConcMarkSweepGC, -XX:CMSInitiatingOccupancyFraction=75, -XX:+UseCMSInitiatingOccupancyOnly, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.io.tmpdir=/tmp/elasticsearch.nbA5pBSr, -XX:+HeapDumpOnOutOfMemoryError, -XX:+PrintGCDetails, -XX:+PrintGCDateStamps, -XX:+PrintTenuringDistribution, -XX:+PrintGCApplicationStoppedTime, -Xloggc:logs/gc.log, -XX:+UseGCLogFileRotation, -XX:NumberOfGCLogFiles=32, -XX:GCLogFileSize=64m, -Des.path.home=/home/marjan/Documents/LogAnalyzer/elasticsearch, -Des.path.conf=/home/marjan/Documents/LogAnalyzer/elasticsearch/config]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [aggs-matrix-stats]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [analysis-common]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [ingest-common]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [lang-expression]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [lang-mustache]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [lang-painless]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [mapper-extras]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [parent-join]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [percolator]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [rank-eval]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [reindex]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [repository-url]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [transport-netty4]
+[2018-03-21T12:19:49,401][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded module [tribe]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-core]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-deprecation]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-graph]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-logstash]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-ml]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-monitoring]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-security]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-upgrade]
+[2018-03-21T12:19:49,402][INFO ][o.e.p.PluginsService     ] [node_log_analyzer] loaded plugin [x-pack-watcher]
+[2018-03-21T12:19:59,353][INFO ][o.e.x.m.j.p.l.CppLogMessageHandler] [controller/10183] [Main.cc@128] controller (64 bit): Version 6.2.2 (Build 61c43548e5e0f2) Copyright (c) 2018 Elasticsearch BV
+[2018-03-21T12:19:59,549][DEBUG][o.e.a.ActionModule       ] Using REST wrapper from plugin org.elasticsearch.xpack.security.Security
+[2018-03-21T12:20:00,702][INFO ][o.e.d.DiscoveryModule    ] [node_log_analyzer] using discovery type [zen]
+[2018-03-21T12:20:01,586][INFO ][o.e.n.Node               ] [node_log_analyzer] initialized
+[2018-03-21T12:20:01,587][INFO ][o.e.n.Node               ] [node_log_analyzer] starting ...
+[2018-03-21T12:20:02,357][INFO ][o.e.t.TransportService   ] [node_log_analyzer] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}
+[2018-03-21T12:20:02,401][WARN ][o.e.b.BootstrapChecks    ] [node_log_analyzer] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2018-03-21T12:20:05,519][INFO ][o.e.c.s.MasterService    ] [node_log_analyzer] zen-disco-elected-as-master ([0] nodes joined), reason: new_master {node_log_analyzer}{8Pc6hVDLQziRJ8xUHOCEEA}{Ta83mJlVSrGrYmSAOCdylQ}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=12487860224, ml.max_open_jobs=20, ml.enabled=true}
+[2018-03-21T12:20:05,524][INFO ][o.e.c.s.ClusterApplierService] [node_log_analyzer] new_master {node_log_analyzer}{8Pc6hVDLQziRJ8xUHOCEEA}{Ta83mJlVSrGrYmSAOCdylQ}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=12487860224, ml.max_open_jobs=20, ml.enabled=true}, reason: apply cluster state (from master [master {node_log_analyzer}{8Pc6hVDLQziRJ8xUHOCEEA}{Ta83mJlVSrGrYmSAOCdylQ}{127.0.0.1}{127.0.0.1:9300}{ml.machine_memory=12487860224, ml.max_open_jobs=20, ml.enabled=true} committed version [1] source [zen-disco-elected-as-master ([0] nodes joined)]])
+[2018-03-21T12:20:05,563][INFO ][o.e.x.s.t.n.SecurityNetty4HttpServerTransport] [node_log_analyzer] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}
+[2018-03-21T12:20:05,564][INFO ][o.e.n.Node               ] [node_log_analyzer] started
+[2018-03-21T12:20:09,933][INFO ][o.e.l.LicenseService     ] [node_log_analyzer] license [33ddb6e4-da7d-4dac-9e7b-bbb0a725d5d7] mode [trial] - valid
+[2018-03-21T12:20:09,973][INFO ][o.e.g.GatewayService     ] [node_log_analyzer] recovered [17] indices into cluster_state
+[2018-03-21T12:20:09,985][WARN ][o.e.l.LicenseService     ] [node_log_analyzer] 
+#
+# License [will expire] on [Friday, April 13, 2018]. If you have a new license, please update it.
+# Otherwise, please reach out to your support contact.
+# 
+# Commercial plugins operate with reduced functionality on license expiration:
+# - security
+#  - Cluster health, cluster stats and indices stats operations are blocked
+#  - All data operations (read and write) continue to work
+# - watcher
+#  - PUT / GET watch APIs are disabled, DELETE watch API continues to work
+#  - Watches execute and write to the history
+#  - The actions of the watches don't execute
+# - monitoring
+#  - The agent will stop collecting cluster and indices metrics
+#  - The agent will stop automatically cleaning indices older than [xpack.monitoring.history.duration]
+# - graph
+#  - Graph explore APIs are disabled
+# - ml
+#  - Machine learning APIs are disabled
+# - logstash
+#  - Logstash will continue to poll centrally-managed pipelines
+# - deprecation
+#  - Deprecation APIs are disabled
+# - upgrade
+#  - Upgrade API is disabled
+[2018-03-21T12:20:11,645][DEBUG][o.e.a.s.TransportSearchAction] [node_log_analyzer] All shards failed for phase: [query]
+[2018-03-21T12:20:11,648][DEBUG][o.e.a.s.TransportSearchAction] [node_log_analyzer] All shards failed for phase: [query]
+[2018-03-21T12:20:11,649][INFO ][o.e.x.s.a.s.m.NativeRoleMappingStore] [node_log_analyzer] The security index is not yet available - no role mappings can be loaded
+[2018-03-21T12:20:11,650][DEBUG][o.e.a.s.TransportSearchAction] [node_log_analyzer] All shards failed for phase: [query]
+[2018-03-21T12:20:12,378][INFO ][o.e.c.m.MetaDataCreateIndexService] [node_log_analyzer] [.monitoring-es-6-2018.03.21] creating index, cause [auto(bulk api)], templates [.monitoring-es], shards [1]/[0], mappings [doc]
+[2018-03-21T12:20:38,269][INFO ][o.e.c.r.a.AllocationService] [node_log_analyzer] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[.monitoring-es-6-2018.03.19][0], [.watcher-history-7-2018.03.14][0], [.monitoring-es-6-2018.03.14][0]] ...]).
+[2018-03-21T12:20:38,606][INFO ][o.e.c.r.a.AllocationService] [node_log_analyzer] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.monitoring-es-6-2018.03.21][0]] ...]).
+[2018-03-21T12:21:30,324][INFO ][o.e.c.m.MetaDataCreateIndexService] [node_log_analyzer] [.watcher-history-7-2018.03.21] creating index, cause [auto(bulk api)], templates [.watch-history-7], shards [1]/[0], mappings [doc]
+[2018-03-21T12:21:30,650][INFO ][o.e.c.r.a.AllocationService] [node_log_analyzer] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.watcher-history-7-2018.03.21][0]] ...]).
+[2018-03-21T12:21:30,753][INFO ][o.e.c.m.MetaDataMappingService] [node_log_analyzer] [.watcher-history-7-2018.03.21/TIpGqk2DQKCe3QSaCJnlVw] update_mapping [doc]
+[2018-03-21T12:21:30,765][INFO ][o.e.c.m.MetaDataMappingService] [node_log_analyzer] [.watcher-history-7-2018.03.21/TIpGqk2DQKCe3QSaCJnlVw] update_mapping [doc]
+[2018-03-21T12:21:31,847][INFO ][o.e.c.m.MetaDataCreateIndexService] [node_log_analyzer] [.monitoring-kibana-6-2018.03.21] creating index, cause [auto(bulk api)], templates [.monitoring-kibana], shards [1]/[0], mappings [doc]
+[2018-03-21T12:21:32,172][INFO ][o.e.c.r.a.AllocationService] [node_log_analyzer] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.monitoring-kibana-6-2018.03.21][0]] ...]).
+[2018-03-21T12:35:37,909][INFO ][o.e.x.m.j.p.NativeController] Native controller process has stopped - no new native processes can be started
+[2018-03-21T12:35:37,934][INFO ][o.e.n.Node               ] [node_log_analyzer] stopping ...
+[2018-03-21T12:35:37,939][INFO ][o.e.x.w.WatcherService   ] [node_log_analyzer] stopping watch service, reason [shutdown initiated]
+[2018-03-21T12:35:40,184][INFO ][o.e.n.Node               ] [node_log_analyzer] stopped
+[2018-03-21T12:35:40,185][INFO ][o.e.n.Node               ] [node_log_analyzer] closing ...
+[2018-03-21T12:35:40,200][INFO ][o.e.n.Node               ] [node_log_analyzer] closed
