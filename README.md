@@ -17,3 +17,4 @@ $ ./start.sh
 3. You can configure them with writing your own config file and put the config file to prpoer location of start.sh file
 4. There is a password file `password.txt` put password to Kibana from this file.
 5. You can also change the password changing password in Elasticsearch
+6. Run Kibana from this url `localhost:5601`
