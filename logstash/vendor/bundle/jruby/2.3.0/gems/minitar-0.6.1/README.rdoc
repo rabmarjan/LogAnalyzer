@@ -1,0 +1,81 @@
+= minitar
+
+home :: https://github.com/halostatue/minitar/
+code :: https://github.com/halostatue/minitar/
+bugs :: https://github.com/halostatue/minitar/issues
+rdoc :: http://rdoc.info/gems/minitar/
+cli  :: https://github.com/halostatue/minitar-cli
+travis :: {<img src="https://travis-ci.org/halostatue/minitar.svg" />}[https://travis-ci.org/halostatue/minitar]
+appveyor :: {<img src="https://ci.appveyor.com/api/projects/status/bj4gqn3gp3gu45sa?svg=true" />}[https://ci.appveyor.com/project/halostatue/minitar]
+coveralls :: {<img src="https://coveralls.io/repos/halostatue/minitar/badge.svg" alt="Coverage Status" />}[https://coveralls.io/r/halostatue/minitar]
+
+== Description
+
+The minitar library is a pure-Ruby library that provides the ability to deal
+with POSIX tar(1) archive files.
+
+This is release 0.6, providing a number of bug fixes including a directory
+traversal vulnerability, CVE-2016-10173. This release starts the migration and
+modernization of the code:
+
+*   the licence has been changed to match the modern Ruby licensing scheme
+    (Ruby and Simplified BSD instead of Ruby and GNU GPL);
+*   the +minitar+ command-line program has been separated into the
+    +minitar-cli+ gem; and
+*   the +archive-tar-minitar+ gem now points to the +minitar+ and +minitar-cli+
+    gems and discourages its installation.
+
+Some of these changes may break existing programs that depend on the internal
+structure of the minitar library, but every effort has been made to ensure
+compatibility; inasmuch as is possible, this compatibility will be maintained
+through the release of minitar 1.0 (which will have strong breaking changes).
+
+minitar (previously called Archive::Tar::Minitar) is based heavily on code
+originally written by Mauricio Julio Fernández Pradier for the rpa-base
+project.
+
+== Synopsis
+
+Using minitar is easy. The simplest case is:
+
+  require 'minitar'
+
+  # Packs everything that matches Find.find('tests').
+  # test.tar will automatically be closed by Minitar.pack.
+  Minitar.pack('tests', File.open('test.tar', 'wb'))
+
+  # Unpacks 'test.tar' to 'x', creating 'x' if necessary.
+  Minitar.unpack('test.tar', 'x')
+
+A gzipped tar can be written with:
+
+  require 'zlib'
+  # test.tgz will be closed automatically.
+  Minitar.pack('tests', Zlib::GzipWriter.new(File.open('test.tgz', 'wb'))
+
+  # test.tgz will be closed automatically.
+  Minitar.unpack(Zlib::GzipReader.new(File.open('test.tgz', 'rb')), 'x')
+
+As the case above shows, one need not write to a file. However, it will
+sometimes require that one dive a little deeper into the API, as in the case of
+StringIO objects. Note that I'm not providing a block with Minitar::Output, as
+Minitar::Output#close automatically closes both the Output object and the
+wrapped data stream object.
+
+  begin
+    sgz = Zlib::GzipWriter.new(StringIO.new(String.new))
+    tar = Output.new(sgz)
+    Find.find('tests') do |entry|
+      Minitar.pack_file(entry, tar)
+    end
+  ensure
+      # Closes both tar and sgz.
+    tar.close
+  end
+
+== minitar Semantic Versioning
+
+The minitar library uses a {Semantic Versioning}[http://semver.org/] scheme
+with one change:
+
+* When PATCH is zero (+0+), it will be omitted from version references.
