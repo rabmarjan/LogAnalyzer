@@ -1,0 +1,64 @@
+<kbn-top-nav class="navbar navbar-default navbar-static-top" name="account-nav">
+  <!-- Transcluded elements. -->
+  <div data-transclude-slots>
+    <!-- Title. -->
+    <div
+      data-transclude-slot="topLeftCorner"
+      class="kuiLocalTitle"
+    >
+      {{user.full_name || user.username}}
+    </div>
+  </div>
+</kbn-top-nav>
+
+<div class="kuiViewContent kuiViewContent--constrainedWidth kuiViewContentItem">
+  <!-- Subheader -->
+  <div class="kuiBar kuiVerticalRhythm">
+    <!-- Title -->
+    <div class="kuiBarSection">
+      <h1 class="kuiTitle">
+        Account Settings
+      </h1>
+    </div>
+
+    <!-- Empty section to push content left -->
+    <div class="kuiBarSection"></div>
+  </div>
+
+  <!-- Username -->
+  <div class="kuiFormSection kuiVerticalRhythm">
+    <label for="username" class="kuiFormLabel">
+      Username
+    </label>
+    <input
+      type="text"
+      class="kuiStaticInput"
+      id="username"
+      name="username"
+      readonly
+      ng-model="user.username"
+    />
+  </div>
+
+  <!-- Email -->
+  <div class="kuiFormSection">
+    <label for="email" class="kuiFormLabel">
+      Email
+    </label>
+    <input
+      type="text"
+      class="kuiStaticInput"
+      id="email"
+      name="email"
+      readonly
+      ng-value="accountController.getEmail()"
+    />
+  </div>
+
+  <!-- Change password -->
+  <kbn-change-password-form
+    require-current-password="true"
+    show-kibana-warning="user.metadata._reserved && user.username === 'kibana'"
+    on-change-password="saveNewPassword(newPassword, currentPassword, onSuccess, onIncorrectPassword)"
+  ></kbn-change-password-form>
+</div>

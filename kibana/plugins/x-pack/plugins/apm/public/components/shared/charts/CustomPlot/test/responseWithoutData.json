@@ -1,0 +1,10 @@
+{
+  "dates": [],
+  "responseTimes": {
+    "avg": [],
+    "p95": [],
+    "p99": []
+  },
+  "tpmBuckets": [],
+  "totalHits": 0
+}

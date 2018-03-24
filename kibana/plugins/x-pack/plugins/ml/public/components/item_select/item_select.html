@@ -1,0 +1,24 @@
+<div class="ml-item-select">
+  <ui-select
+    ng-model="mlItemSelect.selectedItems"
+    on-select="mlItemSelect.onItemsChanged()"
+    on-remove="mlItemSelect.onItemsChanged()"
+    ng-disabled="mlItemSelect.disabled"
+    multiple
+    append-to-body=true
+  >
+    <ui-select-match placeholder="{{mlItemSelect.placeholder}}">
+      {{$item.id}}
+    </ui-select-match>
+    <ui-select-choices
+      repeat="item in mlItemSelect.allItems | filter: { id: $select.search }"
+    >
+      <div class="select-item" >
+        <div ng-bind-html="item.id | highlight: $select.search"></div>
+        <small ng-if="item.extra!==undefined">
+          {{item.extra}}
+        </small>
+      </div>
+    </ui-select-choices>
+  </ui-select>
+</div>

@@ -1,0 +1,708 @@
+.page-row {
+  padding: 0 10px;
+  margin: 10px 0;
+}
+.monitoring-tooltip__trigger,
+.monitoring-tooltip__trigger:hover {
+  color: #222;
+}
+.pui-tooltip-inner {
+  font-size: 12px;
+}
+.monitoring-bread-crumbs {
+  background-color: #E4E4E4;
+}
+.monitoring-bread-crumbs ul > li {
+  display: inline;
+}
+.monitoring-bread-crumbs ul > li > a {
+  color: #5A5A5A;
+}
+.monitoring-bread-crumbs ul > li > a:hover {
+  color: #2D2D2D;
+}
+.monitoring-bread-crumbs ul > li:last-child > a {
+  color: #2D2D2D;
+}
+.monitoring-chart__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  height: 200px;
+  margin-bottom: 15px;
+}
+.monitoring-chart-tooltip {
+  width: 300px;
+}
+.monitoring-chart-tooltip__trigger {
+  float: right;
+  position: relative;
+  top: 3px;
+  right: 15px;
+}
+.monitoring-chart-tooltip__label,
+.monitoring-chart-tooltip__value {
+  text-align: left;
+  font-size: 12px;
+  padding: 4px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.monitoring-chart-tooltip__label {
+  font-weight: bold;
+}
+.monitoring-summary-status {
+  background-color: #e6f2f6;
+  border-bottom: solid 1px #D9D9D9;
+}
+.monitoring-summary-status__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 8px 0;
+}
+.monitoring-summary-status__content > div {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  margin: 0 5px;
+  padding: 2px 5px;
+}
+.monitoring-summary-status__status-indicator {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  text-align: right;
+}
+.monitoring-summary-status__status-indicator * {
+  display: inline;
+}
+/**
+ * 1. Set icon size.
+ * 2. Hack the panel title to move to the left a bit.
+ */
+.cluster-overview-icon {
+  width: 20px;
+  /* 1 */
+  height: 20px;
+  /* 1 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* 1 */
+  margin-right: -3px;
+  /* 2 */
+}
+.cluster-overview-icon__elasticsearch {
+  background-image: url(__REPLACE_WITH_PUBLIC_PATH__4eae70b44c4e3b69f2357bff8f1e67f1.svg);
+}
+.cluster-overview-icon__logstash {
+  background-image: url(__REPLACE_WITH_PUBLIC_PATH__a04c09b6eda01f84b583ed59e958afdc.svg);
+}
+.cluster-overview-icon__kibana {
+  background-image: url(__REPLACE_WITH_PUBLIC_PATH__6199ab7146b1eb859db9ffd2b9b786d3.svg);
+}
+.cluster-overview-icon__beats {
+  background-image: url(__REPLACE_WITH_PUBLIC_PATH__9ad9ca7ab44828ee57b75fdd76a84567.svg);
+}
+.cluster-panel__inner-title {
+  font-weight: normal;
+  font-size: 18px;
+}
+monitoring-shard-activity {
+  border-top: 8px solid #F5F5F5;
+  display: block;
+  padding: 20px;
+}
+monitoring-shard-activity .filter {
+  font-size: 10px;
+  cursor: pointer;
+  padding: 3px 10px;
+  border: 1px solid #D9D9D9;
+}
+monitoring-shard-activity .filter.active {
+  background-color: #A3A5AD;
+  color: #FFF;
+}
+monitoring-shard-activity h1 {
+  font-size: 20px;
+  margin: 0;
+}
+monitoring-shard-activity a:hover {
+  text-decoration: underline;
+}
+monitoring-shard-activity tr > td {
+  background: #FFF;
+}
+monitoring-shard-activity tr.done > td {
+  color: #3F3F3F;
+  background: #FFF;
+}
+monitoring-shard-activity tr.done > td a {
+  color: #0079a5;
+}
+monitoring-shard-activity td {
+  vertical-align: middle !important;
+}
+monitoring-shard-activity p {
+  margin: 0;
+}
+monitoring-shard-activity .table > tbody > tr.red > td.index {
+  border-left: 4px solid #E74C3C;
+}
+monitoring-shard-activity .table > tbody > tr.red.done > td.index {
+  border-left: 0;
+}
+monitoring-shard-activity .table > tbody > tr.yellow > td.index {
+  border-left: 4px solid #F3BC18;
+}
+monitoring-shard-activity .table > tbody > tr.yellow.done > td.index {
+  border-left: 0;
+}
+monitoring-shard-activity .table-condensed > tbody > tr > td.no-results {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #FFF;
+  color: #A3A5AD;
+}
+monitoring-shard-activity h5 {
+  font-size: 18px;
+  margin: 0;
+}
+monitoring-shard-activity h6 {
+  font-size: 16px;
+  margin: 0;
+}
+monitoring-shard-activity .source-dest > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+monitoring-shard-activity .source-dest > div > div {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+monitoring-shard-allocation {
+  display: block;
+  border-top: 8px solid #EFF0F1;
+}
+.monitoring-cluster-view-title {
+  font-size: 20px;
+  margin: 0;
+}
+.monitoring-cluster-view cluster-view {
+  display: block;
+}
+.monitoring-cluster-view .parent {
+  padding-top: 14px;
+  border-left: 3px solid #94C63D !important;
+}
+.monitoring-cluster-view .parent.red {
+  border-left: 3px solid #E74C3C !important;
+}
+.monitoring-cluster-view .parent.yellow {
+  border-left: 3px solid #F3BC18 !important;
+}
+.monitoring-cluster-view td.unassigned {
+  vertical-align: middle;
+  width: 150px;
+}
+.monitoring-cluster-view .children {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+.monitoring-cluster-view .child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  background-color: #666977;
+  margin: 5px;
+}
+.monitoring-cluster-view .child.index {
+  border-left: 4px solid #94C63D;
+}
+.monitoring-cluster-view .child.index.red {
+  border-left: 4px solid #E74C3C;
+}
+.monitoring-cluster-view .child.index.yellow {
+  border-left: 4px solid #F3BC18;
+}
+.monitoring-cluster-view .child .title {
+  padding: 5px 7px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  font: 10px sans-serif;
+  color: #FFF;
+}
+.monitoring-cluster-view .child .title a {
+  color: #FFF;
+  text-decoration: none;
+}
+.monitoring-cluster-view .child .title i {
+  margin-left: 5px;
+}
+.monitoring-cluster-view .child.unassigned .title {
+  color: #999;
+  display: none;
+}
+.monitoring-cluster-view th {
+  text-align: left;
+}
+.monitoring-cluster-view td:first-child {
+  width: 200px;
+}
+.monitoring-cluster-view .shard {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  padding: 5px 7px;
+  background-color: #0d5a77;
+  font: 10px sans-serif;
+  border-left: 1px solid #FFF;
+  position: relative;
+  color: #FFF;
+}
+.monitoring-cluster-view .shard .shard-tooltip {
+  padding: 5px;
+  bottom: 25px;
+  left: 0;
+  background-color: #D1D2D6;
+  position: absolute;
+  color: #666977;
+  border: 1px solid #D1D2D6;
+  white-space: nowrap;
+}
+.monitoring-cluster-view .shard.replica {
+  background-color: #5698ab;
+}
+.monitoring-cluster-view .shard.unassigned {
+  background-color: #A3A5AD !important;
+  color: #000;
+}
+.monitoring-cluster-view .shard.emergency {
+  background-color: #E74C3C !important;
+  color: #000;
+}
+.monitoring-cluster-view .shard.relocating {
+  background-color: #663db8;
+}
+.monitoring-cluster-view .shard.initializing {
+  background-color: #5c71ce;
+}
+.monitoring-cluster-view .legend {
+  font-size: 12px;
+  background-color: #FFF;
+  color: #232123;
+  padding: 5px;
+}
+.monitoring-cluster-view .legend .title {
+  margin-left: 5px;
+  font-weight: bold;
+}
+.monitoring-cluster-view .legend span.shard {
+  float: none;
+  display: inline-block;
+  margin: 0 5px 0 10px;
+  padding: 0 4px;
+}
+.rhythm_chart {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.rhythm_chart__title {
+  color: #5a5a5a;
+  margin: 0 0 10px;
+}
+.rhythm_chart__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+.rhythm_chart__visualization {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative;
+}
+.rhythm_chart__visualization > div {
+  min-width: 1px;
+  width: 100%;
+  height: 100%;
+}
+.rhythm_chart__visualization div {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.rhythm_chart__legend-item {
+  font-size: 12px;
+  cursor: pointer;
+  color: #5a5a5a;
+}
+.rhythm_chart__legend-item.disabled {
+  opacity: 0.5;
+}
+.rhythm_chart__legend-indicator {
+  margin-right: 3px;
+}
+.rhythm_chart__legend-horizontal {
+  margin-top: 3px;
+}
+.rhythm_chart__legend-label {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.rhythm_chart__legend-value {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+.sparkline {
+  height: 2em;
+}
+.sparklineTooltip {
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.7);
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+.sparklineTooltip__xValue {
+  color: rgba(255, 255, 255, 0.7);
+}
+.sparklineTooltip__yValue {
+  color: #ffffff;
+}
+.sparklineTooltipCaret {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.sparklineTooltipContainer {
+  position: fixed;
+  z-index: 120;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.monitoring-status-icon {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  min-width: 1.9em;
+  text-align: center;
+}
+.monitoring-status-icon--green {
+  background-color: #94C63D;
+}
+.monitoring-status-icon--red {
+  background-color: #E74C3C;
+}
+.monitoring-status-icon--yellow {
+  background-color: #F3BC18;
+}
+.monitoring-status-icon--gray {
+  background-color: #A3A5AD;
+}
+.monitoring-summary-status {
+  border-bottom: 1px solid #d4d4d4;
+}
+.lspvContainer {
+  background-color: #F6F6F6;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.lspvVertexTitle {
+  fill: black;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial;
+  font-weight: bold;
+  font-size: 13px;
+  stroke: none;
+}
+.lspvVertexSubtitle {
+  fill: black;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial;
+  font-weight: normal;
+  font-size: 13px;
+  stroke: none;
+}
+.lspvHeader {
+  fill: black;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial;
+  font-size: 13px;
+  stroke: none;
+}
+.lspvVertex {
+  cursor: pointer;
+}
+.lspvVertex.lspvVertex-grayed {
+  opacity: 0.3;
+}
+.lspvVertexBounding {
+  fill: #fff;
+  stroke: #d4d4d4;
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+.lspvVertexBounding.lspvVertexBounding-highlighted {
+  stroke: #6badbf;
+}
+.lspvStat {
+  fill: black;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", Helvetica, Arial;
+  font-weight: normal;
+  font-size: 13px;
+  stroke: none;
+}
+.lspvEdge {
+  stroke: #000;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  opacity: 0.5;
+  marker-end: url(#lspvPlainMarker);
+  fill: none;
+}
+.lspvEdge.lspvEdge-grayed {
+  opacity: 0.1;
+}
+.lspvEdgeBoolean text {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #fff;
+  stroke: none;
+}
+.lspvEdgeBoolean--true {
+  stroke: #1BAFD2;
+  marker-end: url(#lspvTrueMarker);
+}
+.lspvEdgeBoolean--true circle {
+  fill: #1BAFD2;
+}
+.lspvEdgeBoolean--false {
+  stroke: #EE408A;
+  marker-end: url(#lspvFalseMarker);
+}
+.lspvEdgeBoolean--false circle {
+  fill: #EE408A;
+}
+img.lspvDetailDrawerIcon {
+  display: inline;
+  margin: 0 5px 0 0;
+  width: auto;
+  vertical-align: middle;
+}
+.monitoringLogstashPipelineCardGroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.monitoringLogstashPipelineCardGroup__card {
+  padding: 10px;
+  min-height: 232px;
+  -webkit-flex-basis: 33.3%;
+      -ms-flex-preferred-size: 33.3%;
+          flex-basis: 33.3%;
+}
+@media (min-width: 768px) {
+  .monitoringLogstashPipelineCardGroup__card {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .monitoringLogstashPipelineCardGroup__card {
+    -webkit-flex-basis: 25%;
+        -ms-flex-preferred-size: 25%;
+            flex-basis: 25%;
+  }
+}
+.monitoringLogstashPipelineCardGroup__cardPanel {
+  height: 100%;
+}
+.monitoringLogstashPipelineCardGroup__cardMenu {
+  max-height: 110px;
+  overflow: scroll;
+}
+.betaIcon {
+  color: #666;
+}
+/*
+ * A table that stretches the full window width and columns size appropriately to content.
+ * The .monitoringTable class is on the KuiControlledTable instance.
+ * The table within it requires the shrinkToContent flag as well as width set to 100%
+ */
+.monitoringTable .kuiTable {
+  width: 100%;
+}
+.monitoringTableCell__ClusterCell__expired,
+.monitoringTableCell__offline {
+  color: #666977;
+}
+.monitoringTableCell__ClusterCell__license {
+  font-size: 16px;
+}
+.monitoringTableCell__ClusterCell__expiration {
+  color: #666977;
+  line-height: 14px;
+  font-size: 12px;
+}
+.monitoringTableCell__name,
+.monitoringTableCell__status,
+.monitoringTableCell__version {
+  font-size: 18px;
+}
+.monitoringTableCell__transportAddress {
+  color: #666977;
+  line-height: 14px;
+  font-size: 12px;
+}
+.monitoringTableCell__number {
+  font-size: 30px;
+}
+.monitoringTableCell__splitNumber {
+  font-size: 18px;
+  line-height: 22px;
+}
+.monitoringTableCell__MetricCell__metric {
+  display: inline-block;
+  font-size: 30px;
+}
+.monitoringTableCell__MetricCell__slopeArrow {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 30px;
+}
+.monitoringTableCell__MetricCell__minMax {
+  display: inline-block;
+  text-align: right;
+  margin-left: 5px;
+  color: #666977;
+  font-size: 12px;
+}
+.detail-metrics {
+  background-color: #FFF;
+  padding: 20px;
+}
+.detail-metrics h1 {
+  font-size: 24px;
+  margin: 10px 0 10px;
+}
+.monitoring-cluster-alerts {
+  padding: 5px;
+}
+.monitoring-cluster-alerts th:nth-child(2),
+.monitoring-cluster-alerts th:nth-child(3),
+.monitoring-cluster-alerts td:nth-child(2),
+.monitoring-cluster-alerts td:nth-child(3) {
+  text-align: left;
+}
+.xpack-breadcrumbs {
+  min-height: 37px;
+  padding: 8px 10px;
+  margin: 0;
+}

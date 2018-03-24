@@ -1,0 +1,1 @@
+export { isEsErrorFactory } from './is_es_error_factory';

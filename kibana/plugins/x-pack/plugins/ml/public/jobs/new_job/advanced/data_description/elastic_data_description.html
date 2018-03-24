@@ -1,0 +1,56 @@
+<div class="elastic-data-description-container">
+  <div ng-show="ui.esServerOk === 1">
+
+    <div class="form-group">
+      <div><label class="kuiFormLabel"><input type="radio" name="indexRadio" ng-model="ui.wizard.indexInputType" value="{{INDEX_INPUT_TYPE.TEXT}}" /> Input index</label></div>
+      <div><label class="kuiFormLabel"><input type="radio" name="indexRadio" ng-model="ui.wizard.indexInputType" value="{{INDEX_INPUT_TYPE.LIST}}" /> Choose index from list</label></div>
+    </div>
+
+    <!-- text input index list -->
+    <div ng-show="ui.wizard.indexInputType === INDEX_INPUT_TYPE.TEXT" class="form-group">
+      <label class="kuiFormLabel">Index</label>
+      <div class="input-group">
+      <input
+        ng-model="ui.datafeed.indicesText"$
+        placeholder=""
+        class="form-control"
+        ng-change="extractFields()"
+        aria-describedby="index-text-status"
+        list='index_datalist' />
+        <span class="input-group-addon" id="index-text-status">
+          <i ng-show="ui.indexTextOk === true" aria-hidden="true" style='color:green;' class="fa fa-check"></i>
+          <i ng-show="ui.indexTextOk === false" aria-hidden="true" style='color:red;' class="fa fa-remove"></i>
+        </span>
+        <datalist id="index_datalist">
+          <option ng-repeat="(key, value) in ui.sortByKey(ui.indices)" >{{key}}</option>
+        </datalist>
+      </div>
+    </div>
+
+    <!-- checkbox index list -->
+    <div ng-show="ui.wizard.indexInputType === INDEX_INPUT_TYPE.LIST" class="form-group">
+      <label class="kuiFormLabel">Indices</label>
+      <div>
+        <div class="index-list-container">
+          <div ng-repeat="(key, value) in ui.sortByKey(ui.indices) | filterIndices" >
+            <label class='kuiCheckBoxLabel kuiVerticalRhythm'>
+              <input class='kuiCheckBox' type="checkbox" ng-checked="indices[key] !== undefined" ng-click="toggleIndex(key, value)" />
+              <span class='kuiCheckBoxLabel__text'>{{key}}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div ng-show="ui.indexTextOk" class="form-group">
+      <label class="kuiFormLabel">Time-field name</label>
+      <select
+        ng-model="data_description.time_field"
+        class="form-control">
+        <option ng-repeat="(key, value) in dateProperties">{{key}}</option>
+      </select>
+    </div>
+
+  </div>
+
+</div>

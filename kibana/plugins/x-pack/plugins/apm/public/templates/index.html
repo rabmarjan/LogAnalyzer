@@ -1,0 +1,16 @@
+<div ng-controller="TimePickerController">
+    <kbn-top-nav name="apm" config="topNavMenu">
+        <div data-transclude-slots>
+            <div data-transclude-slot="topLeftCorner">
+                <div class="kuiLocalBreadcrumbs">
+                    <div class="kuiLocalBreadcrumb" ng-repeat="breadcrumb in breadcrumbs" style="line-height: 29px;">
+                        <a ng-if="!$last" ng-href="#{{breadcrumb.url}}?_g={{searchQueryTime}}">{{breadcrumb.label}}</a>
+                        <span ng-if="$last">{{breadcrumb.label}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </kbn-top-nav>
+</div>
+
+<div id="react-apm-root" style="overflow-x: scroll;"></div>

@@ -1,0 +1,113 @@
+<kbn-management-app
+  section="logstash/pipelines/pipeline"
+  omit-breadcrumb-pages="['pipeline']"
+>
+  <div class="kuiViewContent kuiViewContent--constrainedWidth" data-test-subj="pipelineEdit pipelineEdit-{{pipelineEdit.pipeline.id}}">
+    <div class="kuiViewContentItem kuiVerticalRhythm">
+      <div class="kuiBar">
+        <div class="kuiBarSection">
+          <div class="kuiButtonGroup">
+            <button
+              class="kuiButton kuiButton--primary"
+              ng-disabled="pipelineEdit.isReadOnly || !pipelineEdit.isSaveEnabled"
+              ng-click="pipelineEdit.onPipelineSave(user.username)"
+              data-test-subj="btnSavePipeline"
+            >
+              Save & Deploy
+            </button>
+            <button
+              class="kuiButton kuiButton--basic"
+              ng-click="pipelineEdit.onClose()"
+              data-test-subj="btnCancel"
+            >
+              Cancel
+            </button>
+            <button
+              ng-if="!pipelineEdit.isNewPipeline"
+              class="kuiButton kuiButton--danger kuiButton--iconText"
+              ng-click="pipelineEdit.onPipelineDelete()"
+              ng-disabled="pipelineEdit.isReadOnly"
+              tooltip="Delete Pipeline"
+              data-test-subj="btnDeletePipeline"
+            >
+              Delete pipeline
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kuiViewContentItem kuiVerticalRhythm">
+      <form name="pipelineEdit.form" novalidate>
+        <div ng-show="pipelineEdit.isNewPipeline"
+          class="kuiFormSection">
+          <label
+            for="id"
+            class="kuiFormLabel"
+          >
+            Pipeline ID
+          </label>
+          <input
+            type="text"
+            ng-class="::pipelineEdit.isNewPipeline ? 'kuiTextInput fullWidth' : 'kuiStaticInput'"
+            ng-disabled="pipelineEdit.isReadOnly || !pipelineEdit.isNewPipeline"
+            id="id"
+            name="id"
+            ng-model="pipelineEdit.pipeline.id"
+            ng-trim="false"
+            pattern="[a-zA-Z_][a-zA-Z0-9_@\-\$\.]*"
+            required
+            data-test-subj="inputId"
+          >
+          <div
+            class="kuiInputNote kuiInputNote--danger"
+            ng-show="pipelineEdit.form.id.$error.pattern"
+          >
+            Pipeline ID must begin with a letter or underscore and contain only letters, underscores, dashes, and numbers.
+          </div>
+          <div
+            class="kuiInputNote kuiInputNote--danger"
+            ng-show="pipelineEdit.form.id.$touched && pipelineEdit.form.id.$error.required"
+          >
+            Pipeline ID is required.
+          </div>
+        </div>
+        <div class="kuiFormSection">
+          <label
+            for="description"
+            class="kuiFormLabel"
+          >
+            Description
+          </label>
+          <input
+            type="text"
+            class="kuiTextInput fullWidth"
+            id="description"
+            name="description"
+            ng-disabled="pipelineEdit.isReadOnly"
+            ng-model="pipelineEdit.pipeline.description"
+            data-test-subj="inputDescription"
+          >
+        </div>
+      </form>
+      <form name="pipelineEdit.jsonForm" novalidate>
+        <div class="kuiFormSection">
+          <label class="kuiFormLabel"
+          >
+            Pipeline
+          </label>
+          <div
+            class="pipeline-editor"
+            ruby-input
+            require-keys="true"
+            ui-ace="{
+              onLoad: aceLoaded
+            }"
+            ng-model="pipelineEdit.pipeline.pipeline"
+            data-test-subj="acePipeline"
+          ></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</kbn-management-app>

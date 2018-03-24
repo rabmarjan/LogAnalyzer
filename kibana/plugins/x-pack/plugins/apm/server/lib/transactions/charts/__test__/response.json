@@ -1,0 +1,643 @@
+{
+  "took": 3,
+  "timed_out": false,
+  "_shards": { "total": 5, "successful": 5, "skipped": 0, "failed": 0 },
+  "hits": { "total": 675, "max_score": 0, "hits": [] },
+  "aggregations": {
+    "transaction_results": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "3CustomStuff",
+          "doc_count": 564,
+          "timeseries": {
+            "buckets": [
+              {
+                "key_as_string": "2017-11-14T15:30:00.000Z",
+                "key": 1510673400000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:31:00.000Z",
+                "key": 1510673460000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:32:00.000Z",
+                "key": 1510673520000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:33:00.000Z",
+                "key": 1510673580000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:34:00.000Z",
+                "key": 1510673640000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:35:00.000Z",
+                "key": 1510673700000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:36:00.000Z",
+                "key": 1510673760000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:37:00.000Z",
+                "key": 1510673820000,
+                "doc_count": 54,
+                "cumsum": { "value": 54 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:38:00.000Z",
+                "key": 1510673880000,
+                "doc_count": 68,
+                "cumsum": { "value": 122 },
+                "rpm": { "value": 68, "normalized_value": 68 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:39:00.000Z",
+                "key": 1510673940000,
+                "doc_count": 54,
+                "cumsum": { "value": 176 },
+                "rpm": { "value": 54, "normalized_value": 54 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:40:00.000Z",
+                "key": 1510674000000,
+                "doc_count": 45,
+                "cumsum": { "value": 221 },
+                "rpm": { "value": 45, "normalized_value": 45 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:41:00.000Z",
+                "key": 1510674060000,
+                "doc_count": 97,
+                "cumsum": { "value": 318 },
+                "rpm": { "value": 97, "normalized_value": 97 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:42:00.000Z",
+                "key": 1510674120000,
+                "doc_count": 88,
+                "cumsum": { "value": 406 },
+                "rpm": { "value": 88, "normalized_value": 88 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:43:00.000Z",
+                "key": 1510674180000,
+                "doc_count": 74,
+                "cumsum": { "value": 480 },
+                "rpm": { "value": 74, "normalized_value": 74 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:44:00.000Z",
+                "key": 1510674240000,
+                "doc_count": 65,
+                "cumsum": { "value": 545 },
+                "rpm": { "value": 65, "normalized_value": 65 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:45:00.000Z",
+                "key": 1510674300000,
+                "doc_count": 19,
+                "cumsum": { "value": 564 },
+                "rpm": { "value": 19, "normalized_value": 19 }
+              }
+            ]
+          },
+          "overall_avg": {
+            "count": 8,
+            "min": 19,
+            "max": 97,
+            "avg": 63.75,
+            "sum": 510
+          }
+        },
+        {
+          "key": "HTTP 2xx",
+          "doc_count": 564,
+          "timeseries": {
+            "buckets": [
+              {
+                "key_as_string": "2017-11-14T15:30:00.000Z",
+                "key": 1510673400000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:31:00.000Z",
+                "key": 1510673460000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:32:00.000Z",
+                "key": 1510673520000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:33:00.000Z",
+                "key": 1510673580000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:34:00.000Z",
+                "key": 1510673640000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:35:00.000Z",
+                "key": 1510673700000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:36:00.000Z",
+                "key": 1510673760000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:37:00.000Z",
+                "key": 1510673820000,
+                "doc_count": 54,
+                "cumsum": { "value": 54 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:38:00.000Z",
+                "key": 1510673880000,
+                "doc_count": 68,
+                "cumsum": { "value": 122 },
+                "rpm": { "value": 68, "normalized_value": 68 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:39:00.000Z",
+                "key": 1510673940000,
+                "doc_count": 54,
+                "cumsum": { "value": 176 },
+                "rpm": { "value": 54, "normalized_value": 54 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:40:00.000Z",
+                "key": 1510674000000,
+                "doc_count": 45,
+                "cumsum": { "value": 221 },
+                "rpm": { "value": 45, "normalized_value": 45 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:41:00.000Z",
+                "key": 1510674060000,
+                "doc_count": 97,
+                "cumsum": { "value": 318 },
+                "rpm": { "value": 97, "normalized_value": 97 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:42:00.000Z",
+                "key": 1510674120000,
+                "doc_count": 88,
+                "cumsum": { "value": 406 },
+                "rpm": { "value": 88, "normalized_value": 88 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:43:00.000Z",
+                "key": 1510674180000,
+                "doc_count": 74,
+                "cumsum": { "value": 480 },
+                "rpm": { "value": 74, "normalized_value": 74 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:44:00.000Z",
+                "key": 1510674240000,
+                "doc_count": 65,
+                "cumsum": { "value": 545 },
+                "rpm": { "value": 65, "normalized_value": 65 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:45:00.000Z",
+                "key": 1510674300000,
+                "doc_count": 19,
+                "cumsum": { "value": 564 },
+                "rpm": { "value": 19, "normalized_value": 19 }
+              }
+            ]
+          },
+          "overall_avg": {
+            "count": 8,
+            "min": 19,
+            "max": 97,
+            "avg": 63.75,
+            "sum": 510
+          }
+        },
+        {
+          "key": "HTTP 5xx",
+          "doc_count": 43,
+          "timeseries": {
+            "buckets": [
+              {
+                "key_as_string": "2017-11-14T15:30:00.000Z",
+                "key": 1510673400000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:31:00.000Z",
+                "key": 1510673460000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:32:00.000Z",
+                "key": 1510673520000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:33:00.000Z",
+                "key": 1510673580000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:34:00.000Z",
+                "key": 1510673640000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:35:00.000Z",
+                "key": 1510673700000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:36:00.000Z",
+                "key": 1510673760000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:37:00.000Z",
+                "key": 1510673820000,
+                "doc_count": 6,
+                "cumsum": { "value": 6 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:38:00.000Z",
+                "key": 1510673880000,
+                "doc_count": 3,
+                "cumsum": { "value": 9 },
+                "rpm": { "value": 3, "normalized_value": 3 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:39:00.000Z",
+                "key": 1510673940000,
+                "doc_count": 7,
+                "cumsum": { "value": 16 },
+                "rpm": { "value": 7, "normalized_value": 7 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:40:00.000Z",
+                "key": 1510674000000,
+                "doc_count": 6,
+                "cumsum": { "value": 22 },
+                "rpm": { "value": 6, "normalized_value": 6 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:41:00.000Z",
+                "key": 1510674060000,
+                "doc_count": 10,
+                "cumsum": { "value": 32 },
+                "rpm": { "value": 10, "normalized_value": 10 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:42:00.000Z",
+                "key": 1510674120000,
+                "doc_count": 6,
+                "cumsum": { "value": 38 },
+                "rpm": { "value": 6, "normalized_value": 6 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:43:00.000Z",
+                "key": 1510674180000,
+                "doc_count": 4,
+                "cumsum": { "value": 42 },
+                "rpm": { "value": 4, "normalized_value": 4 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:44:00.000Z",
+                "key": 1510674240000,
+                "doc_count": 0,
+                "cumsum": { "value": 42 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:45:00.000Z",
+                "key": 1510674300000,
+                "doc_count": 1,
+                "cumsum": { "value": 43 },
+                "rpm": { "value": null, "normalized_value": null }
+              }
+            ]
+          },
+          "overall_avg": {
+            "count": 6,
+            "min": 3,
+            "max": 10,
+            "avg": 6,
+            "sum": 36
+          }
+        },
+        {
+          "key": "HTTP 4xx",
+          "doc_count": 68,
+          "timeseries": {
+            "buckets": [
+              {
+                "key_as_string": "2017-11-14T15:30:00.000Z",
+                "key": 1510673400000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:31:00.000Z",
+                "key": 1510673460000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:32:00.000Z",
+                "key": 1510673520000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:33:00.000Z",
+                "key": 1510673580000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:34:00.000Z",
+                "key": 1510673640000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:35:00.000Z",
+                "key": 1510673700000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:36:00.000Z",
+                "key": 1510673760000,
+                "doc_count": 0,
+                "cumsum": { "value": 0 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:37:00.000Z",
+                "key": 1510673820000,
+                "doc_count": 9,
+                "cumsum": { "value": 9 },
+                "rpm": { "value": null, "normalized_value": null }
+              },
+              {
+                "key_as_string": "2017-11-14T15:38:00.000Z",
+                "key": 1510673880000,
+                "doc_count": 3,
+                "cumsum": { "value": 12 },
+                "rpm": { "value": 3, "normalized_value": 3 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:39:00.000Z",
+                "key": 1510673940000,
+                "doc_count": 5,
+                "cumsum": { "value": 17 },
+                "rpm": { "value": 5, "normalized_value": 5 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:40:00.000Z",
+                "key": 1510674000000,
+                "doc_count": 7,
+                "cumsum": { "value": 24 },
+                "rpm": { "value": 7, "normalized_value": 7 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:41:00.000Z",
+                "key": 1510674060000,
+                "doc_count": 7,
+                "cumsum": { "value": 31 },
+                "rpm": { "value": 7, "normalized_value": 7 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:42:00.000Z",
+                "key": 1510674120000,
+                "doc_count": 6,
+                "cumsum": { "value": 37 },
+                "rpm": { "value": 6, "normalized_value": 6 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:43:00.000Z",
+                "key": 1510674180000,
+                "doc_count": 10,
+                "cumsum": { "value": 47 },
+                "rpm": { "value": 10, "normalized_value": 10 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:44:00.000Z",
+                "key": 1510674240000,
+                "doc_count": 13,
+                "cumsum": { "value": 60 },
+                "rpm": { "value": 13, "normalized_value": 13 }
+              },
+              {
+                "key_as_string": "2017-11-14T15:45:00.000Z",
+                "key": 1510674300000,
+                "doc_count": 8,
+                "cumsum": { "value": 68 },
+                "rpm": { "value": 8, "normalized_value": 8 }
+              }
+            ]
+          },
+          "overall_avg": {
+            "count": 8,
+            "min": 3,
+            "max": 13,
+            "avg": 7.375,
+            "sum": 59
+          }
+        }
+      ]
+    },
+    "response_times": {
+      "buckets": [
+        {
+          "key_as_string": "2017-11-14T15:30:00.000Z",
+          "key": 1510673400000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:31:00.000Z",
+          "key": 1510673460000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:32:00.000Z",
+          "key": 1510673520000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:33:00.000Z",
+          "key": 1510673580000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:34:00.000Z",
+          "key": 1510673640000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:35:00.000Z",
+          "key": 1510673700000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:36:00.000Z",
+          "key": 1510673760000,
+          "doc_count": 0,
+          "pct": { "values": { "95.0": "NaN", "99.0": "NaN" } },
+          "avg": { "value": null }
+        },
+        {
+          "key_as_string": "2017-11-14T15:37:00.000Z",
+          "key": 1510673820000,
+          "doc_count": 69,
+          "pct": { "values": { "95.0": 2470208.6, "99.0": 2534567.92 } },
+          "avg": { "value": 553834.7391304348 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:38:00.000Z",
+          "key": 1510673880000,
+          "doc_count": 74,
+          "pct": {
+            "values": { "95.0": 2910176.0999999996, "99.0": 3537133.4499999946 }
+          },
+          "avg": { "value": 615674.9459459459 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:39:00.000Z",
+          "key": 1510673940000,
+          "doc_count": 66,
+          "pct": {
+            "values": { "95.0": 2500612.5, "99.0": 2594393.6999999993 }
+          },
+          "avg": { "value": 464274.07575757575 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:40:00.000Z",
+          "key": 1510674000000,
+          "doc_count": 58,
+          "pct": { "values": { "95.0": 2527597.15, "99.0": 2601982.08 } },
+          "avg": { "value": 396037.4482758621 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:41:00.000Z",
+          "key": 1510674060000,
+          "doc_count": 114,
+          "pct": {
+            "values": { "95.0": 2468230.1, "99.0": 2733127.0500000007 }
+          },
+          "avg": { "value": 541597.4912280702 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:42:00.000Z",
+          "key": 1510674120000,
+          "doc_count": 100,
+          "pct": { "values": { "95.0": 2536518.9, "99.0": 2776284.010000006 } },
+          "avg": { "value": 775031.17 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:43:00.000Z",
+          "key": 1510674180000,
+          "doc_count": 88,
+          "pct": { "values": { "95.0": 2498687.35, "99.0": 3959511.49 } },
+          "avg": { "value": 483217.125 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:44:00.000Z",
+          "key": 1510674240000,
+          "doc_count": 78,
+          "pct": { "values": { "95.0": 2637059.1, "99.0": 4023380.240000001 } },
+          "avg": { "value": 576777.2307692308 }
+        },
+        {
+          "key_as_string": "2017-11-14T15:45:00.000Z",
+          "key": 1510674300000,
+          "doc_count": 28,
+          "pct": {
+            "values": { "95.0": 2152816.2, "99.0": 2194837.5700000003 }
+          },
+          "avg": { "value": 438265.46428571426 }
+        }
+      ]
+    },
+    "overall_avg": { "value": 557652.1466666666 }
+  }
+}

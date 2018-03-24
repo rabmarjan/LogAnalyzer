@@ -1,0 +1,100 @@
+<button class="kuiButton kuiButton--small kuiButton--secondary pull-right" ng-click="toggleActive()" ng-class="{ active: onlyActive }">
+  <span ng-if="onlyActive">Show</span>
+  <span ng-if="!onlyActive">Hide</span> History
+</button>
+<h1 class="monitoring-cluster-view-title">Shard Activity</h1>
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Stage</th>
+      <th scope="col">Total Time</th>
+      <th scope="col">Source <span class="fa fa-arrow-right"></span> Destination</th>
+      <th scope="col">Repository / Snapshot</th>
+      <th scope="col">Files</th>
+      <th scope="col">Bytes</th>
+      <th scope="col">Translog</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="activity in visibleData" ng-class="{ done: activity.stage === 'DONE', red: activity.primary, yellow: !activity.primary }">
+      <td class="index">
+        <h5><a ng-href="#/elasticsearch/indices/{{ activity.index_name || activity.index.name }}">{{ activity.index_name || activity.index.name }}</a></h5>
+        <p>
+          <span>{{ activity.id }}</span> |
+          <span ng-if="activity.type === 'PRIMARY_RELOCATION'">Primary Relocation</span>
+          <span ng-if="activity.type !== 'PRIMARY_RELOCATION'">{{activity.type|capitalize}}</span>
+        </p>
+      </td>
+      <td class="stage">
+        <h6>{{ activity.stage }}</h6>
+      </td>
+      <td class="time">
+        <h6>
+          <span
+            class="fa fa-info-circle"
+            tooltip="Started at {{ formatDateTimeLocal(activity.start_time_in_millis) }}"
+            tooltip-placement="bottom"
+          ></span>
+          {{ (activity.total_time_in_millis/1000)|formatNumber: '00:00:00' }}
+        </h6>
+      </td>
+      <td class="source-dest">
+        <div>
+          <div>
+            <h6 ng-if="!activity.source.name">n/a</h6>
+            <div ng-if="activity.source.name">
+              <h6>
+                <abbr ng-if="!activity.primary || activity.type === 'PRIMARY_RELOCATION'" title="Copied from Primary">{{ activity.source.name }}</abbr>
+                <span ng-if="activity.primary && activity.type !== 'PRIMARY_RELOCATION'">{{ activity.source.name }}</span>
+              </h6>
+              <p>{{ getIpAndPort(activity.source.transport_address )}}</p>
+            </div>
+          </div>
+          <div><h6><span class="fa fa-arrow-right"></span></h6></div>
+          <div>
+            <div>
+              <h6>{{ activity.target.name }}</h6>
+              <p>{{ getIpAndPort(activity.target.transport_address) }}</p>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td class="snapshot-repo" ng-if="activity">
+        <h6 ng-if="activity.type !== 'SNAPSHOT'">n/a</h6>
+        <div ng-if="activity.type === 'SNAPSHOT'">
+          <h6>
+            {{ activity.source.repository }} /
+            {{ activity.source.snapshot }}
+          </h6>
+        </div>
+      </td>
+      <td class="files">
+        <h5>{{ activity.index.files.percent }}</h5>
+        <p><span>{{ formatNumber(activity.index.files.reused ? activity.index.files.reused : activity.index.files.recovered, '0,0') }}</span>/<span>{{ formatNumber(activity.index.files.total, '0,0') }}</span></p>
+      </td>
+      <td class="bytes">
+        <h5>{{ activity.index.size.percent }}</h5>
+        <p><span>{{ formatNumber(activity.index.size.recovered_in_bytes + activity.index.size.reused_in_bytes, 'byte') }}</span>/<span>{{ formatNumber(activity.index.size.total_in_bytes, 'byte') }}</span></p>
+      </td>
+      <td class="translog" ng-if="activity.translog.total <= 0">
+        <h5>n/a</h5>
+      </td>
+      <td class="translog" ng-if="activity.translog.total > 0">
+        <h5>{{ activity.translog.percent }}</h5>
+        <p><span>{{ activity.translog.total }}</span>/<span>{{ activity.translog.total_on_start }}</span></p>
+      </td>
+    </tr>
+    <tr ng-if="!visibleData.length">
+      <td colspan="8" class="no-results">
+        <span ng-if="onlyActive">
+          There are currently no active shard records for this cluster.
+          Try viewing <a ng-click="toggleActive()" class="kuiLink" kbn-accessible-click>shard history</a>.
+        </span>
+        <span ng-if="!onlyActive">
+          There are no historical shard activity records for this cluster for the selected time range.
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>

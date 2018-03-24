@@ -1,0 +1,102 @@
+@import (reference) '~ui/styles/variables/colors';
+
+monitoring-shard-activity {
+  border-top: 8px solid @globalColorLightestGray;
+  display: block;
+  padding: 20px;
+
+  .filter {
+    font-size: 10px;
+    cursor: pointer;
+    padding: 3px 10px;
+    border: 1px solid @globalColorLightGray;
+    &.active {
+      background-color: @esGray;
+      color: @white;
+    }
+  }
+
+
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  tr > td {
+    background: @white;
+  }
+
+  tr.done > td {
+    color: @globalColorDarkestGray;
+    background: @white;
+  }
+
+  tr.done > td a {
+    color: @globalColorBlue;
+  }
+
+  td {
+    vertical-align: middle !important;
+  }
+
+  p {
+    margin: 0
+  }
+
+  .table > tbody > tr.red {
+    >td.index {
+      border-left: 4px solid @esRed;
+    }
+  }
+  .table > tbody > tr.red.done {
+    >td.index {
+      border-left: 0;
+    }
+  }
+
+  .table > tbody > tr.yellow {
+    >td.index {
+      border-left: 4px solid @esYellow;
+    }
+  }
+  .table > tbody > tr.yellow.done {
+    >td.index {
+      border-left: 0;
+    }
+  }
+
+  .table-condensed > tbody > tr > td.no-results {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    background-color: @white;
+    color: @esGray;
+  }
+
+
+  h5 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .source-dest {
+    >div {
+      display: flex;
+      >div {
+        flex: 1 1 auto;
+        align-items: center;
+        display: flex;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+<div class="kuiPanel kuiVerticalRhythm datavisualizer-panel euiText">
+  <h2>Create Job</h2>
+
+  <div class="create-job-content">
+    <div class="recognized-job-content" ng-show="recognizerResults.count!==0">
+      <p>
+        Select known configurations for recognized data:
+      </p>
+
+      <ml-data-recognizer
+        class-name='"euiFlexGroup euiFlexGrid--gutterLarge euiFlexGroup--responsive euiFlexGroup--wrap"'
+        index-pattern='indexPattern'
+        results=recognizerResults/>
+    </div>
+
+    <p>
+      Use the Advanced job wizard to create a job to find anomalies in this data:
+    </p>
+
+    <div class="euiPanel euiPanel--paddingMedium advanced-job-button">
+      <div class="euiFlexGroup euiFlexGroup--gutterLarge">
+        <div class="euiFlexItem euiFlexItem--flexGrowZero">
+          <i aria-hidden="true" class="synopsisIcon fa fa-cog"></i>
+        </div>
+        <div class="euiFlexItem euiText">
+          <h4>
+            <a href="" ng-click="createJob()" ng-class="{disabled: isTimeBasedIndex===false}" class="euiLink">Advanced</a>
+          </h4>
+          <p class="euiTextColor euiTextColor--subdued">Use the full range of options to create a job for more advanced use cases.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

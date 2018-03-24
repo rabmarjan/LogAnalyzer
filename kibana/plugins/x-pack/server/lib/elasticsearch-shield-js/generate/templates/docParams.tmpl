@@ -1,0 +1,20 @@
+==== Params
+
+[horizontal]
+<%
+
+Object.keys(params).sort().forEach(function (name) {
+  var param = params[name];
+
+  print('`' + param.nameWithDefault + '`::\n');
+  print('`' + param.type + '` -- ' + joinParagraphs(param.description || '') + '\n');
+
+  if (param.options) {
+    print('Options:::\n');
+    _.each(param.options, function (opt) {
+      print('* `"' + opt + '"`\n');
+    });
+  }
+});
+
+%>

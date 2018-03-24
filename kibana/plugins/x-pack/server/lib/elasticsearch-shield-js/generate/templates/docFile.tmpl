@@ -1,0 +1,14 @@
+[[api-reference-shield]]
+== Elasticsearch.js Shield API
+
+[[js-api-method-index-shield]]
+<%
+_.each(methods, function (method) {
+  print('* <<' + method.id + ',' + method.name + '>>\n');
+})
+%>
+<%
+_.each(methods, function (method) {
+  print('\n' + docMethodTmpl(method) + '\n');
+});
+%>

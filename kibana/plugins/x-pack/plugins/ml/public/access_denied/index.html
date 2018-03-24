@@ -1,0 +1,12 @@
+<ml-nav-menu name="access-denied"></ml-nav-menu>
+<div class="col-md-12">
+  <h1>Access Denied!</h1>
+  <p>You are not authorized to access Machine Learning.</p>
+  <p>To use Machine Learning, you need the privileges granted by both the
+    `kibana_user` and `machine_learning_user` roles.
+  </p>
+  <div style='margin-top:20px;'>
+    <button ng-click="accessDenied.goToKibana();" class="kuiButton kuiButton--primary">Back to Kibana</button>
+    <button ng-click="accessDenied.retry();" class="kuiButton kuiButton--basic">Retry</button>
+  </div>
+</div>

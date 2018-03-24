@@ -1,0 +1,123 @@
+<div class='ml-custom-url-manager'>
+  <div class="add-url-form">
+
+    <div class="form-group">
+      <ml-form-label label-id="new_custom_url_label">Label</ml-form-label>
+      <input
+        type="text"
+        class="kuiTextInput add-url-input"
+        ng-model="newCustomUrl.label"
+        aria-labelledby="ml_aria_label_new_custom_url_label"
+        aria-describedby="ml_aria_description_new_custom_url_label" />
+    </div>
+
+    <div class="form-group">
+      <ml-form-label label-id="new_custom_url_link_to">Link to</ml-form-label>
+      <div class="euiSpacer euiSpacer--s"></div>
+      <div>
+        <label
+          class="kuiFormLabel link-to-label"
+          ng-class="{'disabled': savedDashboards.length === 0}"
+          data-toggle="tooltip"
+          ng-attr-tooltip="{{savedDashboards.length === 0 ?  'No Kibana dashboards have been created' : undefined}}"
+          tooltip-placement="bottom">
+          <input type="radio"
+            name="linkToRadio"
+            ng-disabled="savedDashboards.length === 0"
+            ng-model="newCustomUrl.type"
+            required
+            value="{{NEW_CUSTOM_URL_TYPE.KIBANA_DASHBOARD}}" /> Kibana dashboard
+        </label>
+        <label class="kuiFormLabel link-to-label">
+          <input type="radio"
+            name="linkToRadio"
+            ng-model="newCustomUrl.type"
+            value="{{NEW_CUSTOM_URL_TYPE.OTHER}}" /> Other URL
+        </label>
+      </div>
+    </div>
+
+    <!-- Inputs for linking to a Kibana dashboard -->
+    <div ng-show="newCustomUrl.type === NEW_CUSTOM_URL_TYPE.KIBANA_DASHBOARD">
+      <div class="form-group">
+        <ml-form-label label-id="new_custom_url_dashboard">Dashboard name</ml-form-label>
+        <select
+          class="kuiSelect add-url-input dashboard-name-input"
+          ng-model="newCustomUrl.kibanaDashboardSettings.dashboardId"
+          aria-labelledby="ml_aria_label_new_custom_url_dashboard"
+          aria-describedby="ml_aria_description_new_custom_url_dashboard"
+          placeholder="Select dashboard">
+          <option ng-repeat="dashboard in savedDashboards" value="{{dashboard.id}}">{{dashboard.title}}</option>
+        </select>
+      </div>
+
+      <div class="form-group" ng-show="jobFieldNames.length > 0">
+        <ml-form-label label-id="new_custom_url_query_entity">Query entities</ml-form-label>
+        <ml-item-select
+          item-ids='newCustomUrl.kibanaDashboardSettings.queryFieldNames'
+          all-items='jobFieldNames'
+          placeholder='"Entities"'>
+        </ml-item-select>
+      </div>
+
+      <!-- TODO - add ability to specify drilldown time range which is a set interval before / after anomaly -->
+<!--
+      <div class="add-url-time-range">
+        <div class="form-group">
+          <ml-form-label label-id="new_custom_url_time_range">Time range</ml-form-label>
+          <select
+            class="kuiSelect kuiSelect--medium add-url-input"
+            ng-model="newCustomUrl.kibanaDashboardSettings.timeRange.type"
+            aria-labelledby="ml_aria_label_new_custom_url_time_range"
+            aria-describedby="ml_aria_description_new_custom_url_time_range">
+            <option value="{{NEW_CUSTOM_URL_TIME_RANGE_TYPE.DEFAULT}}">default</option>
+            <option value="{{NEW_CUSTOM_URL_TIME_RANGE_TYPE.INTERVAL}}">interval</option>
+          </select>
+        </div>
+
+        <div ng-show="newCustomUrl.kibanaDashboardSettings.timeRange.type === NEW_CUSTOM_URL_TIME_RANGE_TYPE.INTERVAL" class="form-group">
+          <ml-form-label label-id="new_custom_url_time_before">Before</ml-form-label>
+          <input
+            aria-labelledby="ml_aria_label_new_custom_url_time_before"
+            ng-model="newCustomUrl.kibanaDashboardSettings.timeRange.interval.before"
+            type="text"
+            class="form-control" />
+        </div>
+
+        <div ng-show="newCustomUrl.kibanaDashboardSettings.timeRange.type === NEW_CUSTOM_URL_TIME_RANGE_TYPE.INTERVAL" class="form-group">
+          <ml-form-label label-id="new_custom_url_time_after">After</ml-form-label>
+          <input
+            aria-labelledby="ml_aria_label_new_custom_url_time_after"
+            ng-model="newCustomUrl.kibanaDashboardSettings.timeRange.interval.after"
+            type="text"
+            class="form-control" />
+        </div>
+      </div> -->
+    </div>
+
+    <!-- Text area for entering other non-Kibana dashboard URLs -->
+    <div ng-show="newCustomUrl.type === NEW_CUSTOM_URL_TYPE.OTHER" class="form-group">
+      <ml-form-label label-id="new_custom_url_value">URL</ml-form-label>
+      <textarea
+        aria-labelledby="new_custom_url_value"
+        ng-model="newCustomUrl.otherUrlSettings.urlValue"
+        type="text"
+        class="form-control">
+      </textarea>
+    </div>
+
+    <div>
+      <button
+        aria-labelledby="ml_aria_label_new_job_custom_urls"
+        aria-describedby="ml_aria_description_new_job_custom_urls"
+        ng-click="addUrl()"
+        ng-disabled="newCustomUrl.label === undefined || newCustomUrl.label === ''"
+        type="button"
+        class="kuiButton kuiButton--primary">
+        <span id="ml_aria_label_new_job_custom_urls">Add</span>
+      </button>
+    </div>
+
+  </div>
+
+</div>

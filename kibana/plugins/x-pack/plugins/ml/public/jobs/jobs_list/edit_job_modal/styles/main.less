@@ -1,0 +1,68 @@
+.edit-job-modal {
+  font-size: 14px;
+  padding:20px;
+  h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 10px;
+
+    i[ml-info-icon] {
+      font-size: 14px;
+    }
+ 	}
+
+  .tab_contents{
+    padding-top: 20px;
+
+    .detector_field_form {
+      background-color: #FFFFFF;
+      border: none;
+
+       & > div.field-cols {
+        flex: 1 1 1%;
+        margin-right: 5px;
+      }
+    }
+
+    .custom-url, .categorization-filter {
+      display: flex;
+      position: relative;
+      padding-right: 30px;
+      button.remove-button {
+        top: 27px;
+        position: absolute;
+        right: 6px;
+      }
+
+      .field-cols {
+        flex: 1 1 1%;
+        margin-right: 5px;
+      }
+
+      textarea {
+        height: 60px;
+      }
+    }
+
+    .categorization-filter {
+      button.remove-button {
+        top: 4px;
+      }
+    }
+
+    .custom-url-editor {
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    div.validation-error {
+      color: #fe5050;
+      font-size: 12px;
+    }
+
+    small {
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+<div class="kuiViewContent kuiViewContent--constrainedWidth">
+  <div class="kuiNotice">
+    <!-- Back button -->
+    <div ng-if="!isExpired" class="kuiVerticalRhythm">
+      <p class="kuiText">
+        <a kbn-href="#/overview">« Cluster Overview</a>
+      </p>
+    </div>
+
+    <!-- Title (expired license) -->
+    <div ng-if="isExpired" class="kuiVerticalRhythm">
+      <h1 class="kuiTitle kuiVerticalRhythmSmall">
+        <span class="kuiIcon fa-warning kuiIcon--error"></span>
+        Your {{cluster.license.type|capitalize}} license has expired
+      </h1>
+
+      <p class="kuiText kuiVerticalRhythmSmall">
+        Your license expired on {{cluster.license.expiry_date|localizedDate}}.
+      </p>
+    </div>
+
+    <!-- Title (active license) -->
+    <div ng-if="!isExpired" class="kuiVerticalRhythm">
+      <h1 class="kuiTitle kuiVerticalRhythmSmall">
+        <span class="kuiIcon fa-check kuiIcon--success"></span>
+        Your {{cluster.license.type|capitalize}} license is {{cluster.license.status}}
+      </h1>
+
+      <p class="kuiText kuiVerticalRhythmSmall">
+        Your license will expire on {{cluster.license.expiry_date|localizedDate}}.
+      </p>
+    </div>
+
+    <!-- Options -->
+    <div class="kuiCardGroup kuiCardGroup--united kuiVerticalRhythm">
+      <!-- Basic license -->
+      <div class="kuiCard">
+        <div class="kuiCard__description">
+          <div class="kuiCard__descriptionTitle">
+            Register for a Basic License
+          </div>
+          <div class="kuiCard__descriptionText">
+            Monitoring is available for free with a Basic License. Simply register, check your inbox, and enjoy!
+          </div>
+        </div>
+        <div class="kuiCard__footer">
+          <a
+            class="kuiButton kuiButton--basic"
+            href="https://register.elastic.co/xpack_register"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Basic
+          </a>
+        </div>
+      </div>
+
+      <!-- Full X-Pack -->
+      <div class="kuiCard">
+        <div class="kuiCard__description">
+          <div class="kuiCard__descriptionTitle">
+            Unlock the Full Functionality
+          </div>
+          <div class="kuiCard__descriptionText">
+            Get all X-Pack has to offer: security, monitoring, alerting, reporting, and Graph, plus support from the engineers behind the Elastic Stack.
+          </div>
+        </div>
+        <div class="kuiCard__footer">
+          <a
+            class="kuiButton kuiButton--primary"
+            href="https://www.elastic.co/subscriptions/xpack"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get It All
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Install existing license -->
+    <p class="kuiText kuiVerticalRhythm">
+      <span ng-if="isExpired">
+        Already have your license?
+      </span>
+      <span ng-if="!isExpired">
+        Have a newer license?
+      </span> Splendid! <a href="https://www.elastic.co/guide/en/x-pack/current/license-management.html" target="_BLANK" rel="noopener noreferrer">Install it now.</a>
+    </p>
+  </div>
+</div>

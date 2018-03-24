@@ -1,0 +1,18 @@
+<monitoring-main
+  product="elasticsearch"
+  name="overview"
+  data-test-subj="elasticsearchOverviewPage"
+>
+  <monitoring-cluster-status-elasticsearch status="pageData.clusterStatus"></monitoring-cluster-status-elasticsearch>
+
+  <div class="page-row">
+    <div class="row" ng-if="pageData.metrics">
+      <div class="col-md-6"><monitoring-chart series="pageData.metrics.cluster_search_request_rate"></monitoring-chart></div>
+      <div class="col-md-6"><monitoring-chart series="pageData.metrics.cluster_query_latency"></monitoring-chart></div>
+      <div class="col-md-6"><monitoring-chart series="pageData.metrics.cluster_index_request_rate"></monitoring-chart></div>
+      <div class="col-md-6"><monitoring-chart series="pageData.metrics.cluster_index_latency"></monitoring-chart></div>
+    </div>
+  </div>
+
+  <monitoring-shard-activity only-active="true" data="pageData.shardActivity"></monitoring-shard-activity>
+</monitoring-main>

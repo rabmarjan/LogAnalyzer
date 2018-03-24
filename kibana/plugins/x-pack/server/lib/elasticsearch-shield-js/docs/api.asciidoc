@@ -1,0 +1,276 @@
+[[api-reference-shield]]
+== Elasticsearch.js Shield API
+
+[[js-api-method-index-shield]]
+* <<api-shield-authenticate,shield.authenticate>>
+* <<api-shield-change_password,shield.changePassword>>
+* <<api-shield-clear_cached_realms,shield.clearCachedRealms>>
+* <<api-shield-clear_cached_roles,shield.clearCachedRoles>>
+* <<api-shield-delete_role,shield.deleteRole>>
+* <<api-shield-delete_user,shield.deleteUser>>
+* <<api-shield-get_role,shield.getRole>>
+* <<api-shield-get_user,shield.getUser>>
+* <<api-shield-put_role,shield.putRole>>
+* <<api-shield-put_user,shield.putUser>>
+
+
+[[api-shield-authenticate]]
+=== `shield.authenticate`
+
+[source,js]
+--------
+client.shield.authenticate([params, [callback]])
+--------
+
+// no description
+
+The default method is `GET` and the usual <<api-conventions,params and return values>> apply. See Retrieve details about the currently authenticated user[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+
+
+
+link:#[back to top]
+
+
+[[api-shield-change_password]]
+=== `shield.changePassword`
+
+[source,js]
+--------
+client.shield.changePassword([params, [callback]])
+--------
+
+// no description
+
+The default method is `POST` and the usual <<api-conventions,params and return values>> apply. See Change the password of a user[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`refresh`::
+`boolean` -- Refresh the index after performing the operation
+`username`::
+`string` -- The username of the user to change the password for
+
+
+
+link:#[back to top]
+
+
+[[api-shield-clear_cached_realms]]
+=== `shield.clearCachedRealms`
+
+[source,js]
+--------
+client.shield.clearCachedRealms([params, [callback]])
+--------
+
+// no description
+
+The default method is `POST` and the usual <<api-conventions,params and return values>> apply. See Clears the internal user caches for specified realms[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`realms`::
+`string` -- Comma-separated list of realms to clear
+`usernames`::
+`string` -- Comma-separated list of usernames to clear from the cache
+
+
+
+link:#[back to top]
+
+
+[[api-shield-clear_cached_roles]]
+=== `shield.clearCachedRoles`
+
+[source,js]
+--------
+client.shield.clearCachedRoles([params, [callback]])
+--------
+
+// no description
+
+The default method is `POST` and the usual <<api-conventions,params and return values>> apply. See Clears the internal caches for specified roles[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`name`::
+`string` -- Role name
+
+
+
+link:#[back to top]
+
+
+[[api-shield-delete_role]]
+=== `shield.deleteRole`
+
+[source,js]
+--------
+client.shield.deleteRole([params, [callback]])
+--------
+
+// no description
+
+The default method is `DELETE` and the usual <<api-conventions,params and return values>> apply. See Remove a role from the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`name`::
+`string` -- Role name
+`refresh`::
+`boolean` -- Refresh the index after performing the operation
+
+
+
+link:#[back to top]
+
+
+[[api-shield-delete_user]]
+=== `shield.deleteUser`
+
+[source,js]
+--------
+client.shield.deleteUser([params, [callback]])
+--------
+
+// no description
+
+The default method is `DELETE` and the usual <<api-conventions,params and return values>> apply. See Remove a user from the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`refresh`::
+`boolean` -- Refresh the index after performing the operation
+`username`::
+`string` -- username
+
+
+
+link:#[back to top]
+
+
+[[api-shield-get_role]]
+=== `shield.getRole`
+
+[source,js]
+--------
+client.shield.getRole([params, [callback]])
+--------
+
+// no description
+
+The default method is `GET` and the usual <<api-conventions,params and return values>> apply. See Retrieve one or more roles from the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`name`::
+`string` -- Role name
+
+
+
+link:#[back to top]
+
+
+[[api-shield-get_user]]
+=== `shield.getUser`
+
+[source,js]
+--------
+client.shield.getUser([params, [callback]])
+--------
+
+// no description
+
+The default method is `GET` and the usual <<api-conventions,params and return values>> apply. See Retrieve one or more users from the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`username`::
+`list` -- A comma-separated list of usernames
+
+
+
+link:#[back to top]
+
+
+[[api-shield-put_role]]
+=== `shield.putRole`
+
+[source,js]
+--------
+client.shield.putRole([params, [callback]])
+--------
+
+// no description
+
+The default method is `PUT` and the usual <<api-conventions,params and return values>> apply. See Update or create a role for the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`name`::
+`string` -- Role name
+`refresh`::
+`boolean` -- Refresh the index after performing the operation
+
+
+
+link:#[back to top]
+
+
+[[api-shield-put_user]]
+=== `shield.putUser`
+
+[source,js]
+--------
+client.shield.putUser([params, [callback]])
+--------
+
+// no description
+
+The default method is `PUT` and the usual <<api-conventions,params and return values>> apply. See Update or create a user for the native shield realm[the elasticsearch docs] for more about this method.
+
+// no example
+
+==== Params
+
+[horizontal]
+`refresh`::
+`boolean` -- Refresh the index after performing the operation
+`username`::
+`string` -- The username of the User
+
+
+
+link:#[back to top]
+
+

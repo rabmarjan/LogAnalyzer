@@ -1,0 +1,1 @@
+export { registerLogstashPipelinesRoutes } from './register_pipelines_routes';

@@ -1,0 +1,104 @@
+<div class="actions">
+
+  <!-- start -->
+  <div ng-class="(privileges.canStartStopDatafeed===false || licenseDetails.hasExpired===true) ? ['button-wrapper', 'disabled'] : 'button-wrapper'" data-placement="right" data-toggle="tooltip"
+    ng-attr-tooltip="{{(privileges.canStartStopDatafeed===false || licenseDetails.hasExpired===true) ? createPermissionFailureMessage('canStartStopDatafeed') : undefined}}">
+    <button
+      ng-show="job.datafeed_config && job.datafeed_config.state!=='stopping' && job.datafeed_config.state!=='starting'"
+      ng-click="((job.datafeed_config && job.datafeed_config.state==='started')?stopDatafeed(job):startDatafeed(job))"
+      class="kuiButton kuiButton--basic kuiButton--small"
+      data-toggle="tooltip"
+      aria-label="{{((job.datafeed_config && job.datafeed_config.state==='started')?'Stop':'Start')}} datafeed"
+      ng-disabled="(job.datafeed_config.datafeed_id === undefined || privileges.canStartStopDatafeed===false || licenseDetails.hasExpired===true) || job.state==='closing' || job.state==='opening' || job.state==='failed'"
+      tooltip="{{(job.datafeed_config && job.datafeed_config.state==='started')?'Stop datafeed for':'Start datafeed for'}} {{job.job_id}}">
+        <i ng-show="job.datafeed_config && job.datafeed_config.state==='started' && job.state!=='failed'" aria-hidden="true" class="fa fa-stop"></i>
+        <i ng-show="job.datafeed_config && job.datafeed_config.state==='stopped' && (job.state==='opened' || job.state==='closed')" aria-hidden="true" class="fa fa-play"></i>
+        <i ng-show="job.state==='failed'" aria-hidden="true" class="fa fa-play"></i>
+
+        <i ng-show="job.datafeed_config && job.datafeed_config.state==='stopped' && (job.state==='closing' || job.state==='opening')" aria-hidden="true" class="fa fa-clock-o"></i>
+        <i ng-show="job.datafeed_config && job.datafeed_config.state===undefined" aria-hidden="true" class="fa fa-play"></i>
+    </button>
+  </div>
+
+  <!-- stop -->
+  <button
+    disabled
+    ng-show="(!job.datafeed_config) || (job.datafeed_config.state==='stopping' || job.datafeed_config.state==='starting')"
+    class="kuiButton kuiButton--basic kuiButton--small"
+    data-toggle="tooltip"
+    tooltip="No datafeed settings for {{job.job_id}}">
+      <i aria-hidden="true" class="fa fa-clock-o"></i>
+  </button>
+
+  <!-- anomaly explorer -->
+  <a
+    href='ml#/explorer/{{jobUrl.url}}'
+    class="kuiButton kuiButton--basic kuiButton--small"
+    data-toggle="tooltip"
+    aria-label="Open Anomaly Explorer"
+    tooltip="Open {{job.job_id}} in Anomaly Explorer">
+      <i aria-hidden="true" class="fa fa-table"></i>
+  </a>
+
+  <!-- time series explorer -->
+  <!-- if time series job, show the link. otherwise show a disabled button -->
+  <a
+    ng-if='enableTimeSeries'
+    href='ml#/timeseriesexplorer/{{jobUrl.url}}'
+    class="kuiButton kuiButton--basic kuiButton--small"
+    data-toggle="tooltip"
+    aria-label="Open Single Metric Viewer"
+    tooltip="Open {{job.job_id}} in Single Metric Viewer">
+      <i aria-hidden="true" class="fa fa-line-chart"></i>
+  </a>
+  <button
+    ng-if='!enableTimeSeries'
+    disabled
+    class="kuiButton kuiButton--basic kuiButton--small"
+    aria-label="Open single metric viewer"
+    data-toggle="tooltip">
+      <i aria-hidden="true" class="fa fa-line-chart"></i>
+  </button>
+
+  <!-- edit job -->
+  <div ng-class="(privileges.canUpdateJob===false || licenseDetails.hasExpired===true) ? ['button-wrapper', 'disabled'] : 'button-wrapper'" data-placement="right" data-toggle="tooltip"
+    ng-attr-tooltip="{{(privileges.canUpdateJob===false || licenseDetails.hasExpired===true) ? createPermissionFailureMessage('canUpdateJob') : undefined}}">
+    <button
+      ng-click="editJob(job)"
+      ng-disabled="(privileges.canUpdateJob===false || privileges.canUpdateDatafeed===false || licenseDetails.hasExpired===true)"
+      class="kuiButton kuiButton--basic kuiButton--small"
+      aria-label="Edit job"
+      data-toggle="tooltip"
+      tooltip="Edit job" >
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </button>
+  </div>
+
+  <!-- clone job -->
+  <div ng-class="(privileges.canCreateJob===false || licenseDetails.hasExpired===true) ? ['button-wrapper', 'disabled'] : 'button-wrapper'" data-placement="right" data-toggle="tooltip"
+    ng-attr-tooltip="{{(privileges.canCreateJob===false || licenseDetails.hasExpired===true)? createPermissionFailureMessage('canCreateJob') : undefined}}">
+    <button
+      ng-click="cloneJob(job)"
+      class="kuiButton kuiButton--basic kuiButton--small"
+      data-toggle="tooltip"
+      ng-disabled='(privileges.canCreateJob===false || licenseDetails.hasExpired===true)'
+      aria-label="Clone job"
+      tooltip="Clone job" >
+        <i aria-hidden="true" class="fa fa-clone"></i>
+    </button>
+  </div>
+
+  <!-- delete job -->
+  <div ng-class="(privileges.canDeleteJob===false) ? ['button-wrapper', 'disabled'] : 'button-wrapper'" data-placement="right" data-toggle="tooltip"
+    ng-attr-tooltip="{{privileges.canDeleteJob===false ? 'You do not have permission to delete jobs. Please contact your administrator.' : undefined}}">
+    <button
+      ng-click="deleteJob(job)"
+      class="kuiButton kuiButton--danger kuiButton--small"
+      data-toggle="tooltip"
+      ng-disabled='!privileges.canDeleteJob'
+      aria-label="Delete job"
+      tooltip="Delete job">
+        <i aria-hidden="true" class="fa fa-trash"></i>
+    </button>
+  </div>
+</div>

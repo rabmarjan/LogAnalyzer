@@ -1,0 +1,70 @@
+@import (reference) '~ui/styles/variables/colors';
+@import (reference) "~ui/styles/variables";
+
+.job-type-gallery {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: @globalColorLightestGray;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+
+  .recognizer-result {
+    width: 280px;
+  }
+
+  .options-panel {
+    padding: 24px 20px;
+    background-color: @white;
+    min-width: 280px;
+    min-height: 150px;
+    flex-basis: 0;
+  }
+
+  .top-features {
+    margin-top: 10px;
+  }
+
+  .synopsis {
+    margin-left: 10px !important;
+    width: 100%;
+  }
+
+  .synopsisTitle {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .synopsisIcon {
+    padding-top: 8px;
+    color: #00a9e4;
+    font-size: 24px;
+  }
+
+  .kuiSubTitle {
+    padding-bottom: 5px;
+  }
+
+  .kuiSubText {
+    font-size: 13px;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: grey;
+  }
+
+  .index-warning {
+    width: 100%;
+    min-width: 100%;
+
+    .warning-icon {
+      color: #F39C12;
+      font-size: 40px;
+      margin-right: 10px;
+    }
+  }
+}

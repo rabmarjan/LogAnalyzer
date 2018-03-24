@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "Spencer Alger",
+    "company": "Elasticsearch BV"
+  },
+  "name": "elasticsearch-shield",
+  "description": "Shield API plugin for the JavaScript elasticsearch client",
+  "main": "elasticsearch-shield.js",
+  "version": "6.0.0-alpha3",
+  "license": "Apache 2.0",
+  "dependencies": {},
+  "engines": {
+    "node": "4.3.2",
+    "npm": "2.14.22"
+  },
+  "devDependencies": {
+    "bluebird": "^2.9.25",
+    "camelcase": "^1.0.2",
+    "elasticsearch": "^10.0.1",
+    "expect.js": "^0.3.1",
+    "glob": "^5.0.5",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-mocha-test": "^0.12.7",
+    "js-yaml": "^3.3.0",
+    "lodash": "^3.8.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "generate": "node generate",
+    "test": "mocha test/read.js"
+  }
+}

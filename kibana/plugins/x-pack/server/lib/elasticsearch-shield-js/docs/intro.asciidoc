@@ -1,0 +1,21 @@
+[[intro]]
+== Intro
+
+elasticsearch-shield.js is a plugin for the {esjs}[elasticsearch.js client] that adds APIs for using Elasticsearch Shield from JavaScript. It is compatible with elasticsearch.js version 4.1.0 and greater.
+
+[[install]]
+=== Install
+
+elasticsearch-shield.js can downloading from the https://github.com/elastic/elasticsearch-shield-js/blob/master/elasticsearch-shield.js(github repository) or installed using npm or bower.
+
+.Using https://www.npmjs.com/(npm)
+[source,shell]
+--------
+npm install --save elasticsearch-shield
+--------
+
+.Using http://bower.io(bower)
+[source,shell]
+--------
+bower install --save elasticsearch-shield
+--------

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon-Filter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20" rx="4"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Design-NG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Monitoring-LS-Pipeline-NG" transform="translate(-1154.000000, -396.000000)">
+            <g id="FLOW" transform="translate(501.000000, 175.000000)">
+                <g id="box-icon-filter" transform="translate(439.000000, 215.000000)">
+                    <g id="Icon-Filter" transform="translate(214.000000, 6.000000)">
+                        <use id="BG" stroke="#C8C8C8" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <path d="M14.9644829,5.27698864 C14.8934602,5.11363636 14.7301079,5 14.5454488,5 L5.45453972,5 C5.26988063,5 5.10652836,5.11363636 5.03550563,5.27698864 C4.9644829,5.44744318 4.99999427,5.64630682 5.13493745,5.77414773 L8.6363579,9.27556818 L8.6363579,12.7272727 C8.6363579,12.8480114 8.68607381,12.9616477 8.77130109,13.046875 L10.5894829,14.8650568 C10.6747102,14.9573864 10.7883465,15 10.9090852,15 C10.9659034,15 11.0298238,14.9857955 11.086642,14.9644886 C11.2499943,14.8934659 11.3636306,14.7301136 11.3636306,14.5454545 L11.3636306,9.27556818 L14.8650511,5.77414773 C14.9999943,5.64630682 15.0355056,5.44744318 14.9644829,5.27698864 Z" id="Fill-1" fill="#000000"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
