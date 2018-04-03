@@ -52,6 +52,7 @@ function kibanaStart(){
        ./kibana &
        cd $OLDPWD
        printf "${GREEN}Kibana started....${NC}\n"
+       printf "${GREEN} Kibana started at http://localhost:5601 ${NC}\n"
        sleep 5
     else
         printf "${RED}Kibana fail to start${NC}\n"
